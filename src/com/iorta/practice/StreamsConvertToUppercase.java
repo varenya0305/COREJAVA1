@@ -1,0 +1,20 @@
+package com.iorta.practice;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamsConvertToUppercase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> words = Arrays.asList("hello", "world", "java");
+		
+		List<String> upperCaseWords = words.stream()
+									.map(String::toUpperCase)
+									.collect(Collectors.toList());
+		
+		System.out.println(upperCaseWords);
+	}
+
+}
